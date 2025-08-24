@@ -79,13 +79,15 @@ export default function EventCreate() {
         <div className="max-w-4xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <Button
-                variant="ghost"
-                size="sm"
-                className="text-white/70 hover:text-white hover:bg-white/10 p-2"
-              >
-                <ArrowLeft className="w-4 h-4" />
-              </Button>
+              <Link to="/">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="text-white/70 hover:text-white hover:bg-white/10 p-2"
+                >
+                  <ArrowLeft className="w-4 h-4" />
+                </Button>
+              </Link>
               <h1 className="text-2xl font-semibold text-white">
                 Create Event
               </h1>
