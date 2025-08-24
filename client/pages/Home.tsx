@@ -1,4 +1,13 @@
-import { Search, Bell, Star, Calendar, MapPin, Users, ArrowRight, Plus } from "lucide-react";
+import {
+  Search,
+  Bell,
+  Star,
+  Calendar,
+  MapPin,
+  Users,
+  ArrowRight,
+  Plus,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -14,16 +23,18 @@ export default function Home() {
       time: "2:00 PM",
       location: "Downtown Toronto",
       attendees: 45,
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/cedcc5e708ae090ac45d6d68e454ae8996ec17e4?width=400"
+      image:
+        "https://api.builder.io/api/v1/image/assets/TEMP/cedcc5e708ae090ac45d6d68e454ae8996ec17e4?width=400",
     },
     {
       id: "v123abc7",
       title: "Startup Pitch Night",
       date: "Dec 18",
-      time: "6:00 PM", 
+      time: "6:00 PM",
       location: "Innovation Hub",
       attendees: 32,
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/cedcc5e708ae090ac45d6d68e454ae8996ec17e4?width=400"
+      image:
+        "https://api.builder.io/api/v1/image/assets/TEMP/cedcc5e708ae090ac45d6d68e454ae8996ec17e4?width=400",
     },
     {
       id: "w456def9",
@@ -32,15 +43,17 @@ export default function Home() {
       time: "7:00 PM",
       location: "Design Studio",
       attendees: 28,
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/cedcc5e708ae090ac45d6d68e454ae8996ec17e4?width=400"
-    }
+      image:
+        "https://api.builder.io/api/v1/image/assets/TEMP/cedcc5e708ae090ac45d6d68e454ae8996ec17e4?width=400",
+    },
   ];
 
   return (
-    <div 
+    <div
       className="min-h-screen"
       style={{
-        background: "linear-gradient(180deg, rgba(19, 21, 23, 0.00) 0%, #131517 100%)"
+        background:
+          "linear-gradient(180deg, rgba(19, 21, 23, 0.00) 0%, #131517 100%)",
       }}
     >
       {/* Navigation */}
@@ -54,7 +67,7 @@ export default function Home() {
               </div>
               <span className="text-white font-semibold text-lg">Luma</span>
             </div>
-            
+
             <div className="hidden md:flex items-center gap-6">
               <div className="flex items-center gap-2 text-white/70 text-sm hover:text-white transition-colors cursor-pointer">
                 <Calendar className="w-4 h-4" />
@@ -73,7 +86,9 @@ export default function Home() {
 
           {/* Right side */}
           <div className="flex items-center gap-4">
-            <span className="text-sm text-white/60 hidden sm:block">8:49 AM EDT</span>
+            <span className="text-sm text-white/60 hidden sm:block">
+              8:49 AM EDT
+            </span>
             <Link to="/create">
               <Button className="bg-white text-black hover:bg-white/90 font-medium">
                 <Plus className="w-4 h-4 mr-2" />
@@ -81,10 +96,18 @@ export default function Home() {
               </Button>
             </Link>
             <div className="flex items-center gap-2">
-              <Button variant="ghost" size="icon" className="w-8 h-8 text-white/70 hover:text-white hover:bg-white/10">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="w-8 h-8 text-white/70 hover:text-white hover:bg-white/10"
+              >
                 <Search className="w-4 h-4" />
               </Button>
-              <Button variant="ghost" size="icon" className="w-8 h-8 text-white/70 hover:text-white hover:bg-white/10 relative">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="w-8 h-8 text-white/70 hover:text-white hover:bg-white/10 relative"
+              >
                 <Bell className="w-4 h-4" />
                 <div className="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full"></div>
               </Button>
@@ -107,22 +130,26 @@ export default function Home() {
               bring people together
             </span>
           </h1>
-          
+
           <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Create, discover, and attend events that matter. Connect with your community 
-            and build meaningful relationships through shared experiences.
+            Create, discover, and attend events that matter. Connect with your
+            community and build meaningful relationships through shared
+            experiences.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link to="/create">
-              <Button size="lg" className="bg-white text-black hover:bg-white/90 font-semibold px-8 py-3">
+              <Button
+                size="lg"
+                className="bg-white text-black hover:bg-white/90 font-semibold px-8 py-3"
+              >
                 <Plus className="w-5 h-5 mr-2" />
                 Create Your Event
               </Button>
             </Link>
-            <Button 
-              size="lg" 
-              variant="outline" 
+            <Button
+              size="lg"
+              variant="outline"
               className="border-white/30 text-white hover:bg-white/10 bg-transparent font-semibold px-8 py-3"
             >
               Explore Events
@@ -136,8 +163,12 @@ export default function Home() {
       <div className="relative z-10 px-4 py-16">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Featured Events</h2>
-            <p className="text-white/70 text-lg">Discover amazing events happening near you</p>
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Featured Events
+            </h2>
+            <p className="text-white/70 text-lg">
+              Discover amazing events happening near you
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -145,8 +176,8 @@ export default function Home() {
               <Link key={event.id} to={`/${event.id}`}>
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 overflow-hidden hover:bg-white/15 transition-all duration-300 cursor-pointer group">
                   <div className="relative h-48 overflow-hidden">
-                    <img 
-                      src={event.image} 
+                    <img
+                      src={event.image}
                       alt={event.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
@@ -156,23 +187,25 @@ export default function Home() {
                       </Badge>
                     </div>
                   </div>
-                  
+
                   <div className="p-4 space-y-3">
                     <h3 className="text-white font-semibold text-lg line-clamp-2">
                       {event.title}
                     </h3>
-                    
+
                     <div className="space-y-2 text-sm text-white/70">
                       <div className="flex items-center gap-2">
                         <Calendar className="w-4 h-4" />
-                        <span>{event.date} at {event.time}</span>
+                        <span>
+                          {event.date} at {event.time}
+                        </span>
                       </div>
-                      
+
                       <div className="flex items-center gap-2">
                         <MapPin className="w-4 h-4" />
                         <span>{event.location}</span>
                       </div>
-                      
+
                       <div className="flex items-center gap-2">
                         <Users className="w-4 h-4" />
                         <span>{event.attendees} attending</span>
@@ -185,8 +218,8 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-8">
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               className="border-white/30 text-white hover:bg-white/10 bg-transparent"
             >
               View All Events
@@ -199,31 +232,45 @@ export default function Home() {
       {/* Features Section */}
       <div className="relative z-10 px-4 py-16">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-12">Why Choose Luma?</h2>
-          
+          <h2 className="text-3xl font-bold text-white mb-12">
+            Why Choose Luma?
+          </h2>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="space-y-4">
               <div className="w-12 h-12 mx-auto bg-white/10 rounded-lg flex items-center justify-center">
                 <Calendar className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white">Easy Event Creation</h3>
-              <p className="text-white/70">Create beautiful events in minutes with our intuitive interface</p>
+              <h3 className="text-xl font-semibold text-white">
+                Easy Event Creation
+              </h3>
+              <p className="text-white/70">
+                Create beautiful events in minutes with our intuitive interface
+              </p>
             </div>
-            
+
             <div className="space-y-4">
               <div className="w-12 h-12 mx-auto bg-white/10 rounded-lg flex items-center justify-center">
                 <Users className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white">Community Building</h3>
-              <p className="text-white/70">Connect with like-minded people and build lasting relationships</p>
+              <h3 className="text-xl font-semibold text-white">
+                Community Building
+              </h3>
+              <p className="text-white/70">
+                Connect with like-minded people and build lasting relationships
+              </p>
             </div>
-            
+
             <div className="space-y-4">
               <div className="w-12 h-12 mx-auto bg-white/10 rounded-lg flex items-center justify-center">
                 <Search className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white">Smart Discovery</h3>
-              <p className="text-white/70">Find events that match your interests and location perfectly</p>
+              <h3 className="text-xl font-semibold text-white">
+                Smart Discovery
+              </h3>
+              <p className="text-white/70">
+                Find events that match your interests and location perfectly
+              </p>
             </div>
           </div>
         </div>
@@ -232,13 +279,19 @@ export default function Home() {
       {/* CTA Section */}
       <div className="relative z-10 px-4 py-20">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to get started?</h2>
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to get started?
+          </h2>
           <p className="text-xl text-white/80 mb-8">
-            Join thousands of event organizers who trust Luma to bring their communities together.
+            Join thousands of event organizers who trust Luma to bring their
+            communities together.
           </p>
-          
+
           <Link to="/create">
-            <Button size="lg" className="bg-white text-black hover:bg-white/90 font-semibold px-8 py-4 text-lg">
+            <Button
+              size="lg"
+              className="bg-white text-black hover:bg-white/90 font-semibold px-8 py-4 text-lg"
+            >
               <Plus className="w-5 h-5 mr-2" />
               Create Your First Event
             </Button>
@@ -256,7 +309,9 @@ export default function Home() {
                 <span className="font-semibold">Luma</span>
               </div>
               <div className="flex items-center gap-4">
-                <span className="hover:text-white cursor-pointer">Discover</span>
+                <span className="hover:text-white cursor-pointer">
+                  Discover
+                </span>
                 <span className="hover:text-white cursor-pointer">Pricing</span>
                 <span className="hover:text-white cursor-pointer">Help</span>
               </div>

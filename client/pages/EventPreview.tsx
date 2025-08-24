@@ -260,7 +260,7 @@ export default function EventPreview() {
                 Founder Pitch Practice
               </h1>
               <div className="text-sm text-gray-500 mb-2">
-                Event ID: {eventId || 'u438su84'}
+                Event ID: {eventId || "u438su84"}
               </div>
 
               <div className="space-y-3">
