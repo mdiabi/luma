@@ -1,10 +1,27 @@
 import { useState } from "react";
-import { Calendar, MapPin, Users, Upload, Clock, ArrowLeft, Eye, EyeOff, Image, X } from "lucide-react";
+import {
+  Calendar,
+  MapPin,
+  Users,
+  Upload,
+  Clock,
+  ArrowLeft,
+  Eye,
+  EyeOff,
+  Image,
+  X,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
 import { Badge } from "@/components/ui/badge";
 
@@ -19,29 +36,32 @@ export default function EventCreate() {
     isPublic: true,
     category: "",
     tags: [] as string[],
-    coverImage: null as File | null
+    coverImage: null as File | null,
   });
 
   const [newTag, setNewTag] = useState("");
 
-  const handleInputChange = (field: string, value: string | boolean | File | null) => {
-    setEventData(prev => ({ ...prev, [field]: value }));
+  const handleInputChange = (
+    field: string,
+    value: string | boolean | File | null,
+  ) => {
+    setEventData((prev) => ({ ...prev, [field]: value }));
   };
 
   const addTag = () => {
     if (newTag.trim() && !eventData.tags.includes(newTag.trim())) {
-      setEventData(prev => ({
+      setEventData((prev) => ({
         ...prev,
-        tags: [...prev.tags, newTag.trim()]
+        tags: [...prev.tags, newTag.trim()],
       }));
       setNewTag("");
     }
   };
 
   const removeTag = (tagToRemove: string) => {
-    setEventData(prev => ({
+    setEventData((prev) => ({
       ...prev,
-      tags: prev.tags.filter(tag => tag !== tagToRemove)
+      tags: prev.tags.filter((tag) => tag !== tagToRemove),
     }));
   };
 
@@ -58,24 +78,26 @@ export default function EventCreate() {
         <div className="max-w-4xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <Button 
-                variant="ghost" 
-                size="sm" 
+              <Button
+                variant="ghost"
+                size="sm"
                 className="text-white/70 hover:text-white hover:bg-white/10 p-2"
               >
                 <ArrowLeft className="w-4 h-4" />
               </Button>
-              <h1 className="text-2xl font-semibold text-white">Create Event</h1>
+              <h1 className="text-2xl font-semibold text-white">
+                Create Event
+              </h1>
             </div>
             <div className="flex items-center gap-3">
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 className="border-white/20 text-white hover:bg-white/10 bg-transparent"
               >
                 Save Draft
               </Button>
-              <Button 
-                type="submit" 
+              <Button
+                type="submit"
                 form="event-form"
                 className="bg-white text-[#521616] hover:bg-white/90 font-medium"
               >
@@ -91,19 +113,25 @@ export default function EventCreate() {
         <form id="event-form" onSubmit={handleSubmit} className="space-y-8">
           {/* Cover Image Upload */}
           <div className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 p-6">
-            <Label className="text-white font-medium mb-4 block">Event Cover Image</Label>
+            <Label className="text-white font-medium mb-4 block">
+              Event Cover Image
+            </Label>
             <div className="border-2 border-dashed border-white/30 rounded-lg p-8 text-center hover:border-white/50 transition-colors cursor-pointer">
               <div className="flex flex-col items-center gap-3">
                 <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
                   <Upload className="w-6 h-6 text-white/70" />
                 </div>
                 <div>
-                  <p className="text-white/90 font-medium">Upload cover image</p>
-                  <p className="text-white/60 text-sm">Recommended size: 1920x1080px</p>
+                  <p className="text-white/90 font-medium">
+                    Upload cover image
+                  </p>
+                  <p className="text-white/60 text-sm">
+                    Recommended size: 1920x1080px
+                  </p>
                 </div>
-                <Button 
-                  type="button" 
-                  variant="outline" 
+                <Button
+                  type="button"
+                  variant="outline"
                   size="sm"
                   className="border-white/30 text-white hover:bg-white/10 bg-transparent"
                 >
@@ -116,11 +144,15 @@ export default function EventCreate() {
 
           {/* Basic Information */}
           <div className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 p-6 space-y-6">
-            <h2 className="text-lg font-semibold text-white">Basic Information</h2>
-            
+            <h2 className="text-lg font-semibold text-white">
+              Basic Information
+            </h2>
+
             {/* Event Title */}
             <div className="space-y-2">
-              <Label htmlFor="title" className="text-white font-medium">Event Title *</Label>
+              <Label htmlFor="title" className="text-white font-medium">
+                Event Title *
+              </Label>
               <Input
                 id="title"
                 placeholder="Enter event title"
@@ -133,12 +165,16 @@ export default function EventCreate() {
 
             {/* Description */}
             <div className="space-y-2">
-              <Label htmlFor="description" className="text-white font-medium">Description</Label>
+              <Label htmlFor="description" className="text-white font-medium">
+                Description
+              </Label>
               <Textarea
                 id="description"
                 placeholder="Describe your event..."
                 value={eventData.description}
-                onChange={(e) => handleInputChange("description", e.target.value)}
+                onChange={(e) =>
+                  handleInputChange("description", e.target.value)
+                }
                 className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:ring-white/30 min-h-[120px]"
                 rows={5}
               />
@@ -147,7 +183,9 @@ export default function EventCreate() {
             {/* Category */}
             <div className="space-y-2">
               <Label className="text-white font-medium">Category</Label>
-              <Select onValueChange={(value) => handleInputChange("category", value)}>
+              <Select
+                onValueChange={(value) => handleInputChange("category", value)}
+              >
                 <SelectTrigger className="bg-white/10 border-white/20 text-white">
                   <SelectValue placeholder="Select a category" />
                 </SelectTrigger>
@@ -191,7 +229,9 @@ export default function EventCreate() {
                   placeholder="Add a tag"
                   value={newTag}
                   onChange={(e) => setNewTag(e.target.value)}
-                  onKeyPress={(e) => e.key === "Enter" && (e.preventDefault(), addTag())}
+                  onKeyPress={(e) =>
+                    e.key === "Enter" && (e.preventDefault(), addTag())
+                  }
                   className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:ring-white/30"
                 />
                 <Button
@@ -212,10 +252,12 @@ export default function EventCreate() {
               <Calendar className="w-5 h-5" />
               Date & Time
             </h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="date" className="text-white font-medium">Date *</Label>
+                <Label htmlFor="date" className="text-white font-medium">
+                  Date *
+                </Label>
                 <Input
                   id="date"
                   type="date"
@@ -226,7 +268,9 @@ export default function EventCreate() {
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="time" className="text-white font-medium">Time *</Label>
+                <Label htmlFor="time" className="text-white font-medium">
+                  Time *
+                </Label>
                 <Input
                   id="time"
                   type="time"
@@ -245,22 +289,28 @@ export default function EventCreate() {
               <MapPin className="w-5 h-5" />
               Location & Capacity
             </h2>
-            
+
             <div className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="location" className="text-white font-medium">Location *</Label>
+                <Label htmlFor="location" className="text-white font-medium">
+                  Location *
+                </Label>
                 <Input
                   id="location"
                   placeholder="Enter event location or 'Online'"
                   value={eventData.location}
-                  onChange={(e) => handleInputChange("location", e.target.value)}
+                  onChange={(e) =>
+                    handleInputChange("location", e.target.value)
+                  }
                   className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:ring-white/30"
                   required
                 />
               </div>
-              
+
               <div className="space-y-2">
-                <Label htmlFor="capacity" className="text-white font-medium">Capacity</Label>
+                <Label htmlFor="capacity" className="text-white font-medium">
+                  Capacity
+                </Label>
                 <div className="relative">
                   <Users className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/50" />
                   <Input
@@ -268,7 +318,9 @@ export default function EventCreate() {
                     type="number"
                     placeholder="Max attendees"
                     value={eventData.capacity}
-                    onChange={(e) => handleInputChange("capacity", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange("capacity", e.target.value)
+                    }
                     className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:ring-white/30 pl-10"
                     min="1"
                   />
@@ -280,10 +332,14 @@ export default function EventCreate() {
           {/* Privacy & Visibility */}
           <div className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 p-6 space-y-6">
             <h2 className="text-lg font-semibold text-white flex items-center gap-2">
-              {eventData.isPublic ? <Eye className="w-5 h-5" /> : <EyeOff className="w-5 h-5" />}
+              {eventData.isPublic ? (
+                <Eye className="w-5 h-5" />
+              ) : (
+                <EyeOff className="w-5 h-5" />
+              )}
               Privacy & Visibility
             </h2>
-            
+
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <div className="space-y-1">
@@ -294,16 +350,19 @@ export default function EventCreate() {
                 </div>
                 <Switch
                   checked={eventData.isPublic}
-                  onCheckedChange={(checked) => handleInputChange("isPublic", checked)}
+                  onCheckedChange={(checked) =>
+                    handleInputChange("isPublic", checked)
+                  }
                   className="data-[state=checked]:bg-white data-[state=unchecked]:bg-white/20"
                 />
               </div>
-              
+
               {!eventData.isPublic && (
                 <div className="bg-white/5 rounded-lg p-4 border border-white/10">
                   <p className="text-white/70 text-sm">
                     <EyeOff className="w-4 h-4 inline mr-2" />
-                    Private events can only be accessed via direct link or invitation.
+                    Private events can only be accessed via direct link or
+                    invitation.
                   </p>
                 </div>
               )}
@@ -312,7 +371,7 @@ export default function EventCreate() {
 
           {/* Submit Button - Mobile */}
           <div className="md:hidden">
-            <Button 
+            <Button
               type="submit"
               className="w-full bg-white text-[#521616] hover:bg-white/90 font-medium py-3"
             >
