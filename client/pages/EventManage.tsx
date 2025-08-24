@@ -92,8 +92,8 @@ export default function EventManage() {
           </div>
         </div>
 
-        {/* Navigation Tabs - Hidden with opacity */}
-        <div className="border-b border-gray-100 mb-8 opacity-0">
+        {/* Navigation Tabs */}
+        <div className="border-b border-gray-100 mb-8">
           <div className="flex items-center gap-8">
             <div className="border-b-2 border-[#131517] pb-2">
               <span className="text-[#131517] text-sm font-medium">Overview</span>
