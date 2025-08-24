@@ -349,12 +349,90 @@ export default function Index() {
                       <p>Huge thanks for joining our Pitch Practice with Eduardo yesterday. As promised, here are Eduardo's top notes distilled for you:</p>
                       <p><strong>1) Customer-centric thinking</strong></p>
                       <p>Be clear on who pays vs. who uses. Solve the payer's problem.</p>
-                      <p className="text-xs">... [truncated for brevity]</p>
+                      <p>Make the pain believable, quantify it, and tie your solution to what they care about.</p>
+                      <p>Explain implementation from the customer's view and say things that build trust.</p>
+                      <p><strong>2) Storytelling & narrative</strong></p>
+                      <p>Use a simple structure: Past → Present → Future or What → So What → Now What.</p>
+                      <p>Nail the opening and keep attention (5s → 30s → 2m → 5m).</p>
+                      <p><strong>3) Credibility</strong></p>
+                      <p>Proof wins: tests, pilots, customers, metrics.</p>
+                      <p><strong>4) Delivery</strong></p>
+                      <p>Show passion. Use your hands; scan the room with your eyes.</p>
+                      <p><strong>5) Business logic</strong></p>
+                      <p>Position against real alternatives (including "do nothing").</p>
+                      <p><strong>6) Feedback culture</strong></p>
+                      <p>When asking for feedback, expose weaknesses so you can get help.</p>
+                      <p className="pt-6">See you at the next one!</p>
+                      <p>Best,</p>
+                      <p>Hatem & Eduardo</p>
                     </div>
                   </div>
                 </div>
 
-                {/* Additional messages would follow similar pattern */}
+                {/* Second Message */}
+                <div className="border-t border-[#000061]/8 pt-4">
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-2">
+                      <Avatar className="w-4 h-4">
+                        <AvatarImage src="https://api.builder.io/api/v1/image/assets/TEMP/0c4c8eb29e007331ef6c7dd58457428438c8fda4?width=32" />
+                        <AvatarFallback>EB</AvatarFallback>
+                      </Avatar>
+                      <div className="flex-1">
+                        <span className="text-[#000061] text-sm font-medium">Eduardo Bailetti</span>
+                      </div>
+                      <span className="text-[#004D8D]/80 text-xs">Aug 19, 7:07 PM</span>
+                    </div>
+
+                    <div className="space-y-4">
+                      <h4 className="text-[#000061] text-base font-semibold">Preparation Help - Download the Venture Concept Template</h4>
+                      <div className="text-[#000061] text-sm space-y-3 leading-relaxed">
+                        <p>Looking forward to seeing you tomorrow for the "Founder Pitch Practice"!</p>
+                        <p>To help prepare, download the Venture Concept Template available here:</p>
+                        <div className="border-b border-[#007AD6]/20 pb-1">
+                          <p className="text-[#2F7CA9] text-sm leading-relaxed">
+                            https://docs.google.com/presentation/d/13KUoVu1b36eXhNnwoT9BpWcMUG<br />
+                            m0p3bn/edit?<br />
+                            usp=sharing&ouid=111672543501948406786&rtpof=true&sd=true
+                          </p>
+                        </div>
+                        <p>The template is meant to be a tool to help you capture and organize your thoughts about your new venture, and to nudge you on some things that you may have not yet considered. Fill it in and work to make your messaging clear.</p>
+                        <p>This will help you tell your story. Clear ideas result in clear communication!</p>
+                        <p>See you tomorrow!</p>
+                        <p>Eduardo Bailetti</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Third Message */}
+                <div className="border-t border-[#000061]/8 pt-4">
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-2">
+                      <Avatar className="w-4 h-4">
+                        <AvatarImage src="https://api.builder.io/api/v1/image/assets/TEMP/ce4874dc8da8260d702ad8d71fb58a152114722d?width=32" />
+                        <AvatarFallback>MD</AvatarFallback>
+                      </Avatar>
+                      <div className="flex-1">
+                        <span className="text-[#000061] text-sm font-medium">Mohamed hatem Diabi</span>
+                      </div>
+                      <span className="text-[#004D8D]/80 text-xs">Aug 19, 11:16 AM</span>
+                    </div>
+
+                    <div className="space-y-4">
+                      <h4 className="text-[#000061] text-base font-semibold">Event Alert: Founder Pitch Practice is Happening tomorrow</h4>
+                      <div className="text-[#000061] text-sm space-y-3 leading-relaxed">
+                        <p>Hey everyone</p>
+                        <p>We are hosting a new pitch practice tomorrow (Wednesday, Aug 20 ) during our CoHacking session</p>
+                        <p>It's a great chance to:</p>
+                        <p>- Practice explaining your project in 4 minutes<br />
+                        - Get constructive feedback from the group<br />
+                        - Hear what others are building and get inspired</p>
+                        <p>Join here:</p>
+                        <p className="text-[#000061]">https://lu.ma/bz156w2n</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
