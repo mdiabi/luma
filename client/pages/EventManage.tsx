@@ -77,10 +77,10 @@ export default function EventManage() {
       </nav>
 
       {/* Gradient Background */}
-      <div className="h-45 bg-gradient-to-b from-blue-100/20 via-purple-50/10 to-transparent"></div>
+      <div className="h-32 bg-gradient-to-b from-blue-100/20 via-purple-50/10 to-transparent"></div>
 
       {/* Main Content */}
-      <div className="max-w-[820px] mx-auto px-4 -mt-36 relative z-10">
+      <div className="max-w-[820px] mx-auto px-4 pt-8 relative z-10">
         {/* Header Section */}
         <div className="text-center mb-8 animate-in fade-in duration-500">
           <div className="flex items-center justify-center gap-2 mb-3">
