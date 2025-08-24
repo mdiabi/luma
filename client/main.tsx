@@ -15,7 +15,7 @@ let root = createRoot(container);
 root.render(
   <StrictMode>
     <App />
-  </StrictMode>
+  </StrictMode>,
 );
 
 // Handle hot module replacement in development
@@ -25,7 +25,7 @@ if (import.meta.hot) {
       root.render(
         <StrictMode>
           <newModule.default />
-        </StrictMode>
+        </StrictMode>,
       );
     }
   });
