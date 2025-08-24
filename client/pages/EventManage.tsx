@@ -82,7 +82,7 @@ export default function EventManage() {
       {/* Main Content */}
       <div className="max-w-[820px] mx-auto px-4 -mt-36 relative z-10">
         {/* Header Section */}
-        <div className="text-center mb-8 opacity-0 animate-in fade-in duration-500">
+        <div className="text-center mb-8 animate-in fade-in duration-500">
           <div className="flex items-center justify-center gap-2 mb-3">
             <h1 className="text-[30px] font-semibold text-[#131517]">Founder Pitch Practice</h1>
             <Button size="sm" className="bg-gray-100 text-gray-600 hover:bg-gray-200 h-7 px-3 text-xs">
